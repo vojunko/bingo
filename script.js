@@ -16,12 +16,14 @@ function generateTable() {
             const input = document.createElement("input");
             input.type = "text";
             input.id = `word${i * gridSize + j + 1}`;
+            input.placeholder = `word${i * gridSize + j + 1}`; // Nastavení výchozího textu
             cell.appendChild(input);
             row.appendChild(cell);
         }
         bingoTable.appendChild(row);
     }
 }
+
 
 // Funkce pro generování Bingo karty
 function generateBingoCard() {
