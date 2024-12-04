@@ -114,8 +114,8 @@ table input {
 
 .bingo-message {
     margin-top: 20px;
-    font-size: 24px;
-    color: #427443;
+    font-size: 36px;
+    color: green;
     font-weight: bold;
 }
 label{
