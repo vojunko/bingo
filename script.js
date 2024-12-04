@@ -24,7 +24,6 @@ function generateTable() {
     }
 }
 
-
 // Funkce pro generování Bingo karty
 function generateBingoCard() {
     selectedWords = [];
@@ -142,7 +141,6 @@ function checkBingo() {
     }
 
     // Zobrazí nebo skryje zprávu podle výsledku kontroly
-   // Zobrazí nebo skryje zprávu podle výsledku kontroly
     const bingoMessage = document.getElementById("bingoMessage");
     if (bingo) {
         bingoMessage.classList.remove("hidden");
