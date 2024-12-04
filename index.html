@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>BINGO</title>
+</head>
+<body>
+    <header>
+        <h1>BINGO</h1>
+    </header>
+
+    <div class="container">
+        <select class="option" id="gridSize">
+            <option value="3">3x3</option>
+            <option value="4">4x4</option>
+            <option value="5">5x5</option>
+        </select>
+
+        <div id="editTableContainer">
+            <table id="bingoTable">
+                <tbody>
+                    <!-- Dynamicky se měnící tabulka podle velikosti mřížky -->
+                </tbody>
+            </table>
+        </div>
+
+        <button id="generateBtn" onclick="generateBingoCard()">Generate</button>
+        <button id="editBtn" class="hidden" onclick="enableEditing()">Edit</button>
+
+        <div id="bingoCard" class="bingo-grid hidden"></div>
+
+        <div id="bingoMessage" class="bingo-message hidden">BINGO!</div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
