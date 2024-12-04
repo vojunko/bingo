@@ -141,6 +141,14 @@ function checkBingo() {
         }
     }
 
+    // Zobrazí nebo skryje zprávu podle výsledku kontroly
+    const bingoMessage = document.getElementById("bingoMessage");
+    if (bingo) {
+        bingoMessage.classList.remove("hidden");
+    } else {
+        bingoMessage.classList.add("hidden");
+    }
+}
     // Pokud je BINGO, zobrazí zprávu
     if (bingo) {
         document.getElementById("bingoMessage").classList.remove("hidden");
