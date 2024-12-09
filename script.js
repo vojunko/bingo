@@ -2,6 +2,62 @@ let gridSize;
 let selectedWords = [];
 let bingoGrid = [];
 
+// Funkce pro uložení stavu do Local Storage
+function saveState() {
+    const state = {
+        gridSize,
+        selectedWords,
+        bingoGrid: bingoGrid.map(cell => ({
+            text: cell.textContent,
+            clicked: cell.classList.contains("clicked")
+        }))
+    };
+    localStorage.setItem("bingoState", JSON.stringify(state));
+}
+
+// Funkce pro načtení stavu z Local Storage
+function loadState() {
+    const savedState = localStorage.getItem("bingoState");
+    if (savedState) {
+        const state = JSON.parse(savedState);
+        gridSize = state.gridSize;
+
+        // Obnovení tabulky
+        document.getElementById("gridSize").value = gridSize;
+        generateTable();
+
+        // Vyplnění polí slovy
+        selectedWords = state.selectedWords || [];
+        selectedWords.forEach((word, index) => {
+            const input = document.getElementById(`word${index + 1}`);
+            if (input) input.value = word;
+        });
+
+        // Obnovení Bingo karty
+        if (state.bingoGrid && state.bingoGrid.length) {
+            generateBingoCard();
+            state.bingoGrid.forEach((cellState, index) => {
+                const cell = bingoGrid[index];
+                if (cell) {
+                    cell.textContent = cellState.text;
+                    if (cellState.clicked) {
+                        cell.classList.add("clicked");
+                    }
+                }
+            });
+        }
+    }
+}
+
+// Uložení stavu před zavřením nebo obnovením stránky
+window.addEventListener("beforeunload", saveState);
+
+// Načtení stavu při načtení stránky
+window.onload = () => {
+    loadState();
+    generateTable();
+};
+
 // Funkce pro generování tabulky podle vybraného rozměru
 function generateTable() {
     gridSize = parseInt(document.getElementById("gridSize").value);
