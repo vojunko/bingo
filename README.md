@@ -1,4 +1,5 @@
 🎉 Bingo
+
 Bingo is a simple web-based game built with HTML, CSS, and JavaScript.
 Users can manually fill in the grid with custom values and then click on the cells as they complete them. When a full row, column, or diagonal is marked, the game automatically detects a Bingo!
 
