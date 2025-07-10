@@ -12,18 +12,17 @@ Automatic detection of winning combinations (rows, columns, diagonals)
 
 Lightweight, no libraries or frameworks used
 
+Dynamic board size (3x3, 4x4, 5x5)
+
 🛠️ Tech Stack
+
 HTML5
 
 CSS3
 
 Vanilla JavaScript (ES6)
 
-📸 Preview
-(Add screenshot or GIF here if available)
-
 💡 Possible Improvements
-Dynamic board size (e.g., 4x4, 5x5)
 
 Random word/phrase generator
 
