@@ -4,6 +4,7 @@ Bingo is a simple web-based game built with HTML, CSS, and JavaScript.
 Users can manually fill in the grid with custom values and then click on the cells as they complete them. When a full row, column, or diagonal is marked, the game automatically detects a Bingo!
 
 🔹 Features
+
 Customizable Bingo board — users enter their own values
 
 Interactive cell marking with visual feedback
@@ -31,4 +32,5 @@ Sound effects and animations
 Better mobile responsiveness
 
 📄 License
+
 This project is open-source and available under the MIT License.
